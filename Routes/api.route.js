@@ -159,9 +159,9 @@ app.get("/dashboard",async(req,res)=>
 {
    try
    {
-     let dashboard=await Booking.find()
+      const data=await Booking.find({}).populate("user").populate("flight")
      
-     res.send(dashboard).status(200)
+     res.send(data).status(200)
    }   
    catch(e)
    {
