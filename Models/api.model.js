@@ -28,8 +28,8 @@ const flightSchema=mongoose.Schema({
 
   const bookingSchema=mongoose.Schema(
     {
-        user : { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
-        flight : {type: mongoose.Schema.Types.ObjectId, ref: 'Flight' }
+        user : { type: mongoose.Schema.Types.ObjectId, ref: User },
+        flight : {type: mongoose.Schema.Types.ObjectId, ref: Flight }
     }
    
   )
